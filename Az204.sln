@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionApp", "FunctionApp\FunctionApp.csproj", "{DCB1F6D9-C125-4D4A-9A48-3CAD5D9F9DFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionApp", "FunctionApp\FunctionApp.csproj", "{DCB1F6D9-C125-4D4A-9A48-3CAD5D9F9DFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionAppStorageTable", "FunctionAppStorageTable\FunctionAppStorageTable.csproj", "{E9A2FC1E-E64F-437C-8014-B6C70D146408}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DCB1F6D9-C125-4D4A-9A48-3CAD5D9F9DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCB1F6D9-C125-4D4A-9A48-3CAD5D9F9DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCB1F6D9-C125-4D4A-9A48-3CAD5D9F9DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A2FC1E-E64F-437C-8014-B6C70D146408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A2FC1E-E64F-437C-8014-B6C70D146408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A2FC1E-E64F-437C-8014-B6C70D146408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A2FC1E-E64F-437C-8014-B6C70D146408}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

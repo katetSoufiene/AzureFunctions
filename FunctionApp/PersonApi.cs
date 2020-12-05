@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace FunctionApp
 {
-    public static class PersonFunction
+    public static class PersonApi
     {
 
         public static List<Person> items { get; set; } = new List<Person>();
@@ -22,7 +22,7 @@ namespace FunctionApp
           [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "Person")] HttpRequest req,
           ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            log.LogInformation("Add Person.");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var input = JsonConvert.DeserializeObject<PersonCreateModel>(requestBody);
@@ -39,7 +39,7 @@ namespace FunctionApp
          [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "Person")] HttpRequest req,
          ILogger log)
         {
-            log.LogInformation("C# GetPersons.");
+            log.LogInformation("Get all Person.");
 
             return new OkObjectResult(items);
         }
@@ -64,7 +64,7 @@ namespace FunctionApp
         public static async Task<IActionResult> Update(
             [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "Person/{id}")] HttpRequest req, ILogger log, string id)
         {
-            log.LogInformation("C# UpdatePerson.");
+            log.LogInformation("Update Person.");
 
             var Person = items.FirstOrDefault(item => item.Id == id);
 
@@ -86,7 +86,7 @@ namespace FunctionApp
         public static async Task<IActionResult> Delete(
            [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "Person/{id}")] HttpRequest req, ILogger log, string id)
         {
-            log.LogInformation("C# UpdatePerson.");
+            log.LogInformation("Delete Person.");
 
             var Person = items.FirstOrDefault(item => item.Id == id);
 
@@ -95,7 +95,5 @@ namespace FunctionApp
 
             return new OkResult();
         }
-
-
     }
 }

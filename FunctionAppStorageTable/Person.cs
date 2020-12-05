@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FunctionApp
+namespace FunctionAppStorageTable
 {
     public class Person
     {
@@ -12,7 +12,6 @@ namespace FunctionApp
 
     public static class Mappings
     {
-
         public static PersonTableEntity PersonTableEntity(this Person person)
         {
             return new PersonTableEntity()
@@ -25,7 +24,7 @@ namespace FunctionApp
             };
         }
 
-        public static Person Person(this PersonTableEntity personTableEntity)
+        public static Person ToPerson(this PersonTableEntity personTableEntity)
         {
             return new Person()
             {
@@ -35,7 +34,5 @@ namespace FunctionApp
                 CreatedTime = personTableEntity.CreatedTime,
             };
         }
-
     }
-
 }

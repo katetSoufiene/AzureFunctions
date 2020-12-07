@@ -17,8 +17,8 @@ namespace FunctionV2
         {
             await container.CreateIfNotExistsAsync();
             var blob = container.GetBlockBlobReference($"{user.Id}.txt");
-            await blob.UploadTextAsync($"Created a new task: {user.Name}");
-            log.LogInformation($"C# Queue trigger function processed: {user.Name}");
+            await blob.UploadTextAsync($"Created a new User: {user.Name}");
+            log.LogInformation($"Queue trigger function processed: {user.Name}");
         }
     }
 }
